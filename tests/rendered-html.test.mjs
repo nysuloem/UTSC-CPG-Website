@@ -20,6 +20,9 @@ test("homepage renders the research-group identity and primary actions", async (
   assert.match(html, /Model the whole system/);
   assert.match(html, /Explore our research/);
   assert.match(html, /Request the UTSC release/);
+  assert.match(html, /Unofficial review draft/);
+  assert.match(html, /not been approved, endorsed, or published/);
+  assert.match(html, /<a[^>]+href="\/research"[^>]*>Research<\/a>/);
   assert.doesNotMatch(html, /codex-preview|SkeletonPreview|react-loading-skeleton/);
 });
 
@@ -46,5 +49,5 @@ test("representative output detail metadata matches its record", async () => {
   assert.match(html, /Best Undergraduate Research Presenter/);
   assert.match(html, /Aaesha Ahmed/);
   assert.match(html, /UTSC BIOD98 Presentation Day/);
-  assert.match(html, /<title>Best Undergraduate Research Presenter \| UTSC Computational Physiology Group<\/title>/);
+  assert.match(html, /<title>Best Undergraduate Research Presenter \| Unofficial UTSC CPG Review Draft<\/title>/);
 });
