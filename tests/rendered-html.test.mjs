@@ -21,7 +21,9 @@ test("homepage renders the research-group identity and primary actions", async (
   assert.match(html, /Explore our research/);
   assert.match(html, /Request the UTSC release/);
   assert.match(html, /Alcohol, dopamine, and opponent-process adaptation/);
-  assert.match(html, /Boaz Li · Dr\. Jason Brown/);
+  assert.match(html, /Boaz Li/);
+  assert.doesNotMatch(html, /Boaz Li · Dr\. Jason Brown/);
+  assert.ok(html.indexOf("Alcohol, dopamine, and opponent-process adaptation") < html.indexOf("Kidney function across populations"));
   assert.match(html, /Unofficial review draft/);
   assert.match(html, /not been approved, endorsed, or published/);
   assert.match(html, /<a[^>]+href="\/research"[^>]*>Research<\/a>/);
@@ -60,5 +62,6 @@ test("alcohol-dopamine paper entry renders manuscript-grounded copy", async () =
   const html = await response.text();
   assert.match(html, /Linking alcohol pharmacokinetics to dopamine and opponent-process adaptation in HumMod/);
   assert.match(html, /Boaz Yat Li/);
+  assert.doesNotMatch(html, /Dr\. Jason Brown/);
   assert.match(html, /normalized results are theoretical and require quantitative validation/);
 });

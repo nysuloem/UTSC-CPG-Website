@@ -71,6 +71,15 @@ export const projects: Project[] = [
     outputs: ["ontario-biology-day-2026"],
   },
   {
+    slug: "alcohol-dopamine-opponent-process",
+    title: "Alcohol, dopamine, and opponent-process adaptation",
+    theme: "Neurobehavioral & metabolic",
+    summary: "Linking systemic blood-alcohol concentration to acute dopamine reward, tolerance, negative affect, and exposure-dependent opponent-process adaptation.",
+    members: ["Boaz Li"],
+    status: "active",
+    outputs: ["alcohol-dopamine-opponent-process-2026"],
+  },
+  {
     slug: "kidney-variation",
     title: "Kidney function across populations",
     theme: "Renal physiology",
@@ -78,15 +87,6 @@ export const projects: Project[] = [
     members: ["Nida Rahmani"],
     status: "active",
     outputs: [],
-  },
-  {
-    slug: "alcohol-dopamine-opponent-process",
-    title: "Alcohol, dopamine, and opponent-process adaptation",
-    theme: "Neurobehavioral & metabolic",
-    summary: "Linking systemic blood-alcohol concentration to acute dopamine reward, tolerance, negative affect, and exposure-dependent opponent-process adaptation.",
-    members: ["Boaz Li", "Dr. Jason Brown"],
-    status: "active",
-    outputs: ["alcohol-dopamine-opponent-process-2026"],
   },
   {
     slug: "nutrition-metabolism",
@@ -134,7 +134,7 @@ export const outputs: Output[] = [
     date: "2026",
     venue: "BIOD98 research article · JCSA-style manuscript draft",
     summary: "A new HumMod module connects systemic alcohol exposure to acute dopamine responses, tolerance, negative affect, and longer-term neuroadaptation.",
-    authors: ["Boaz Yat Li", "Dr. Jason Brown"],
+    authors: ["Boaz Yat Li"],
     body: [
       "The alcohol–dopamine opponent-process (ADOP) module uses blood-alcohol concentration and its direction of change to drive a rapid positive response and phasic dopamine activity. Slower opponent, stress, tonic-dopamine, and allostatic processes represent the negative state that can persist as alcohol exposure declines.",
       "Across repeated simulated exposures, the model produced reduced positive responsiveness and a stronger opponent response, with larger changes under the high-dose condition. These normalized results are theoretical and require quantitative validation, but they establish a whole-body framework for future studies of voluntary drinking, abstinence, cues, and relapse.",
