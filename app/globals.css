@@ -115,6 +115,7 @@ p { line-height:1.65; }
 .research-row { display:grid; grid-template-columns:.42fr 1fr; gap:clamp(2rem,7vw,8rem); padding:clamp(2.5rem,5vw,5rem) 0; border-bottom:1px solid var(--line); }
 .research-row>div:last-child { max-width:54rem; }
 .research-row h2 { font-size:clamp(2rem,3.5vw,3.5rem); }
+.research-row h2 + p { margin-top:1.5rem; }
 .research-row>div:last-child>p { color:var(--muted); font-size:1.04rem; }
 .research-meta { display:grid; align-content:start; gap:.75rem; }
 .research-meta>span:first-child { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; color:var(--lake); font-size:.7rem; }
