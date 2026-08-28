@@ -20,6 +20,8 @@ test("homepage renders the research-group identity and primary actions", async (
   assert.match(html, /Model the whole system/);
   assert.match(html, /Explore our research/);
   assert.match(html, /Request the UTSC release/);
+  assert.match(html, /Alcohol, dopamine, and opponent-process adaptation/);
+  assert.match(html, /Boaz Li · Dr\. Jason Brown/);
   assert.match(html, /Unofficial review draft/);
   assert.match(html, /not been approved, endorsed, or published/);
   assert.match(html, /<a[^>]+href="\/research"[^>]*>Research<\/a>/);
@@ -50,4 +52,13 @@ test("representative output detail metadata matches its record", async () => {
   assert.match(html, /Aaesha Ahmed/);
   assert.match(html, /UTSC BIOD98 Presentation Day/);
   assert.match(html, /<title>Best Undergraduate Research Presenter \| Unofficial UTSC CPG Review Draft<\/title>/);
+});
+
+test("alcohol-dopamine paper entry renders manuscript-grounded copy", async () => {
+  const response = await render("/outputs/alcohol-dopamine-opponent-process-2026");
+  assert.equal(response.status, 200);
+  const html = await response.text();
+  assert.match(html, /Linking alcohol pharmacokinetics to dopamine and opponent-process adaptation in HumMod/);
+  assert.match(html, /Boaz Yat Li/);
+  assert.match(html, /normalized results are theoretical and require quantitative validation/);
 });

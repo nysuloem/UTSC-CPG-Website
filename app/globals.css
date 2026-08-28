@@ -58,7 +58,7 @@ h3 { margin:0; font-family:Georgia,"Times New Roman",serif; color:var(--uoft-blu
 p { line-height:1.65; }
 .text-link { display:inline-flex; align-items:center; gap:.5rem; color:var(--lake); font-size:.86rem; font-weight:800; white-space:nowrap; }
 .text-link:hover { text-decoration:underline; text-underline-offset:4px; }
-.project-grid { display:grid; grid-template-columns:repeat(3,1fr); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+.project-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
 .project-card { position:relative; min-height:28rem; padding:2rem; border-right:1px solid var(--line); background:rgba(255,255,255,.35); }
 .project-card:first-child { padding-left:0; background:transparent; }
 .project-card:last-child { border-right:0; }
@@ -164,6 +164,12 @@ p { line-height:1.65; }
 .contact-band { padding:clamp(5rem,9vw,8rem) 0; background:var(--lake); color:white; }
 .light-note { color:rgba(255,255,255,.62)!important; margin-top:1rem; }
 
+@media (max-width:1100px) and (min-width:901px) {
+  .project-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .project-card:nth-child(2) { border-right:0; }
+  .project-card:nth-child(-n+2) { border-bottom:1px solid var(--line); }
+  .project-card:nth-child(3) { padding-left:0; }
+}
 @media (max-width:900px) {
   .content-width { width:min(100% - 2rem,1380px); }
   .desktop-nav { display:none; }
