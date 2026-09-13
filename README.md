@@ -22,3 +22,12 @@ Public-facing research-group website and LinkedIn launch materials for the UTSC 
 - `pnpm run build` — build the deployable site
 - `pnpm run lint` — run static checks
 - `node --test tests/rendered-html.test.mjs` — test the built server output
+
+## Railway deployment
+
+1. In Railway, create a project from this GitHub repository and deploy from the repository root.
+2. Railway should detect the existing `pnpm` scripts automatically. If manual overrides are needed, use `pnpm run build` as the build command and `pnpm start` as the start command.
+3. Generate a public domain in the service's Networking settings.
+4. Add `NEXT_PUBLIC_SITE_URL` with the complete public origin, including `https://` and no trailing slash, then redeploy. This keeps canonical, sitemap, and social-sharing URLs aligned with the Railway domain.
+
+The application requires Node.js 22.13 or newer and listens on Railway's `PORT` automatically.

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://utsc-computational-physiology.openai.site"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://utsc-computational-physiology.boazli001.chatgpt.site"),
   title: { default: "Unofficial Review Draft | UTSC Computational Physiology Group", template: "%s | Unofficial UTSC CPG Review Draft" },
   description: "Unofficial website concept for review. Student-led computational physiology research, teaching, and inclusive HumMod development at the University of Toronto Scarborough.",
   robots: { index: false, follow: false },
