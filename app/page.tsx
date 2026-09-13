@@ -18,11 +18,14 @@ export default function Home() {
               <Link className="button button-secondary" href="/join">Work with us</Link>
             </div>
           </div>
-          <div className="system-visual" aria-label="Abstract network of connected physiological systems">
-            <div className="orbit orbit-one"><span>Brain</span></div>
-            <div className="orbit orbit-two"><span>Heart</span></div>
-            <div className="orbit orbit-three"><span>Kidney</span></div>
-            <div className="core"><strong>11K+</strong><small>variables</small></div>
+          <div className="system-visual">
+            <img
+              className="hummod-character"
+              src="/hummod-character.png"
+              alt="Smiling illustrated computer character representing HumMod"
+              width="400"
+              height="400"
+            />
           </div>
         </div>
         <div className="hero-proof" aria-label="Group focus areas">
