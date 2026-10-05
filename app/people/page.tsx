@@ -19,7 +19,7 @@ export default function PeoplePage() {
     <section className="content-width" style={{ marginBottom: "3rem" }}>
       <figure style={{ margin: 0 }}>
         <Image
-          src="/images/utsc-cpg-group-2026.webp"
+          src="/images/utsc-cpg-group-2026.jpg"
           alt="Members of the UTSC Computational Physiology Group gathered around a conference table"
           width={1714}
           height={967}
